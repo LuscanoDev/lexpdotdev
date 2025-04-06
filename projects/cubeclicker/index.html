@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeClicker</title>
+    <style>
+        html body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            width: 1580px;
+            height: 600px;
+        }
+
+        #gameContainer {
+            display: flex;
+        }
+
+        #container {
+            position: relative;
+            width: 1000px;
+            height: 700px;
+            border: 5px solid rgb(83, 83, 83);
+            border-radius: 10px;
+            background-color: rgba(49, 49, 49, 0.70);
+            margin: 0 auto;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .square {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        #score {
+            position: absolute;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(83, 83, 83);
+            border-end-end-radius: 10px;
+            width: auto;
+            height: auto;
+        }
+
+        #shopContainer {
+            margin-left: 20px;
+            width: 300px;
+            height: 700px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgba(49, 49, 49, 0.70);
+            border: 5px solid rgb(83, 83, 83);
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        #infoContainer {
+            margin-right: 20px;
+            width: 300px;
+            height: 700px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgba(49, 49, 49, 0.70);
+            border: 5px solid rgb(83, 83, 83);
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .shopItem shop.h1 {
+            margin: 10px;
+            font-size: 14px;
+        }
+        #speedCounter {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 50px;
+            color: rgb(255, 0, 0);
+            font-weight: bold;
+        }
+        button{
+            font-size: 20px;
+            border-radius: 5px;
+            width: 100%;
+            height: 50px;
+        }
+        button:enabled{
+            border: 2px solid green;
+            background-color: greenyellow;
+        }
+        button:disabled{
+            border: 2px solid rgb(121, 50, 50);
+            background-color: rgb(255, 47, 47);
+        }
+        .credits{
+            text-align: center;
+            margin-top: 650px;
+        }
+        .css-selector {
+            background: linear-gradient(273deg, #37ca00, #001fca, #ca0000);
+            background-size: 600% 600%;
+            -webkit-animation: gradient 59s ease infinite;
+            -moz-animation: gradient 59s ease infinite;
+            animation: gradient 59s ease infinite;
+        }
+
+        @-webkit-keyframes gradient {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @-moz-keyframes gradient {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @keyframes gradient {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        
+        </style>
+</head>
+<body class="css-selector">
+
+<div id="gameContainer">
+    <div id="infoContainer">
+        <div id="score">Score: <span id="scoreValue">0</span></div>
+        <p class="credits">made by LuscanoDev/Lexp<br><a class="back" href="/">back</a></p>
+    </div>
+  <div id="container">
+    <div id="speedCounter">00:30</div>
+  </div>
+  
+  <div id="shopContainer">
+    <h1>Shop</h1>
+    
+    <button id="changeColorBtn" class="shopItem" onclick="buyChangeColor()">Change Color (Cost: 10 points)</button>
+    <button id="speedUpBtn" class="shopItem" onclick="buySpeedUp()">Speed Up (Cost: 40 points)</button>
+    <button id="plusClickBtn" class="shopItem" onclick="buyClickPlus()">Click Plus (Cost: 30 points)</button>
+    <audio id="pop" src="Pop.mp3"></audio>
+    <audio id="buy" src="Buy.mp3"></audio>
+  </div>
+  
+</div>
+
+
+<script>
+  // esse codigo foi sim gerado por ia na época que ela estava ficando famosa.
+  // eu ainda gero sites completamente com IA? não.
+  // pq eu deixo isso online ainda? pq o pessoal ainda gosta :P
+  // enfim, isso foi um aviso. - lexp / 05.04.2025
+
+  var score = 0;
+  var valorClique = 1;
+  var colorUpgradeBought = false;
+  var speedUpgradeBought = false;
+  var speedUpgradePrice = 40;
+  var speedInterval = 1000;
+  var clickPlusPrice = 30;
+  var speedCounterInterval;
+  var createSquareInterval;
+
+  document.getElementById('scoreValue').innerText = score;
+
+  function createSquare() {
+    var container = document.getElementById('container');
+    var square = document.createElement('div');
+
+    square.className = 'square';
+    square.style.left = Math.random() * (container.clientWidth - 50) + 'px';
+    square.style.top = Math.random() * (container.clientHeight - 50) + 'px';
+
+    if (colorUpgradeBought) {
+      square.style.backgroundColor = getRandomColor();
+    } else {
+      square.style.backgroundColor = 'red';
+    }
+
+    square.addEventListener('click', function() {
+      container.removeChild(square);
+      document.getElementById('pop').play();
+      score += valorClique;
+      document.getElementById('scoreValue').innerText = score;
+    });
+
+    container.appendChild(square);
+  }
+
+  function buyChangeColor() {
+    if (score >= 10 && !colorUpgradeBought) {
+      score -= 10;
+      document.getElementById('buy').play();
+      document.getElementById('scoreValue').innerText = score;
+      colorUpgradeBought = true;
+
+      var squares = document.querySelectorAll('.square');
+      squares.forEach(function(square) {
+        square.style.backgroundColor = getRandomColor();
+      });
+
+      document.getElementById('changeColorBtn').disabled = true;
+    }
+  }
+
+  function buySpeedUp() {
+    if (score >= speedUpgradePrice && !speedUpgradeBought) {
+      score -= speedUpgradePrice;
+      document.getElementById('buy').play();
+      document.getElementById('scoreValue').innerText = score;
+
+      speedUpgradeBought = true;
+      document.getElementById('speedUpBtn').disabled = true;
+      clearInterval(createSquareInterval); // Limpa o intervalo anterior
+      createSquareInterval = setInterval(createSquare, 300); // Define um novo intervalo com 300ms
+
+      document.getElementById('speedCounter').style.display = 'block'; // Mostra o contador
+      speedCounterInterval = setInterval(updateSpeedCounter, 1000);
+      setTimeout(endSpeedUp, 30000); // Define um tempo limite para o término do Speed Up
+    }
+  }
+
+  function endSpeedUp() {
+    speedUpgradeBought = false;
+    clearInterval(createSquareInterval); // Limpa o intervalo de criação de quadrados
+    createSquareInterval = setInterval(createSquare, speedInterval); // Restaura o intervalo original
+    speedUpgradePrice += 30;
+    document.getElementById('speedUpBtn').innerText = 'Speed Up (Cost: ' + speedUpgradePrice + ' points)';
+    document.getElementById('speedUpBtn').disabled = false;
+    clearInterval(speedCounterInterval);
+    document.getElementById('speedCounter').style.display = 'none'; // Esconde o contador
+    
+  }
+
+  function updateSpeedCounter() {
+    var counterElement = document.getElementById('speedCounter');
+    var time = counterElement.innerText.split(':');
+    var minutes = parseInt(time[0], 10);
+    var seconds = parseInt(time[1], 10);
+
+    seconds -= 1;
+    if (seconds < 0) {
+      seconds = 30;
+    }
+
+    counterElement.innerText = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+  }
+
+  function buyClickPlus() {
+    if (score >= clickPlusPrice) {
+      score -= clickPlusPrice;
+      document.getElementById('buy').play();
+      document.getElementById('scoreValue').innerText = score;
+
+      valorClique *= 2;
+      clickPlusPrice += 10;
+
+      document.getElementById('plusClickBtn').innerText = 'Click Plus (Cost: ' + clickPlusPrice + ' points)';
+    }
+  }
+
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  createSquareInterval = setInterval(createSquare, speedInterval); // Define o intervalo inicial para a criação de quadrados
+</script>
+</body>
+</html>

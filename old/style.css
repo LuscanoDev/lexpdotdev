@@ -1,0 +1,118 @@
+:root {
+    --backgroud: #262034;
+    --textcolor: #fff;
+    --divbackgroud: #1e0032;
+    --divsection: #4400a4;
+    --divbright: #b588f3;
+}
+
+body {
+    background-color: var(--backgroud);
+    color: var(--textcolor);
+}
+
+.website {
+    margin: auto;
+    justify-content: center;
+    width: 900px;
+}
+
+.box {
+    background-color: var(--divbackgroud);
+}
+
+.message {
+    display: flex;
+    background-color: none;
+    justify-content: center;
+    background-color: #fff;
+    color: #000000;
+}
+
+.top {
+    display: flex;
+    background-color: none;
+    overflow: hidden;
+}
+
+.top img {
+    width: 900px;
+}
+
+.main-content {
+    display: flex;
+}
+
+.bar {
+    width: 200px;
+    height: 700px;
+    background-color: var(--divbackgroud);
+    margin-top: 10px;
+    
+}
+
+.rightbar {
+    border-left: var(--divsection) 3px solid;
+}
+
+.leftbar {
+    border-right: var(--divsection) 3px solid;
+}
+
+.main {
+    width: 600px;
+    background-color: var(--divbackgroud);
+    margin: 10px;
+    margin-bottom: 0px;
+    border: var(--divsection) 3px solid;
+}
+
+.section-main {
+    text-align: center;
+    background-color: var(--divsection);
+    height: 80px;
+    line-height: 30px;
+    margin-top: 0px;
+    border-top: var(--divbright) 5px solid;
+    border-bottom: var(--divbright) 5px solid;
+}
+
+.section {
+    background-color: var(--divsection);
+    padding: 10px;
+    border-bottom: var(--divbright) 3px solid;
+}
+
+.item-section {
+    padding: 10px;
+    border-bottom: var(--divsection) 1px solid;
+}
+
+.leftbar .item-section {
+    border-left: var(--divbright) 3px solid;
+}
+
+.rightbar .item-section {
+    border-right: var(--divbright) 3px solid;
+}
+
+.bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.item-section:hover {
+    background-color: var(--divsection);
+}
+
+.leftbar .section {
+    text-align: end;
+}
+
+.endpage {
+    background-color: var(--divbackgroud);
+    margin-top: 10px;
+    text-align: center;
+    border: var(--divsection) 3px solid;
+    padding: 10px;
+}

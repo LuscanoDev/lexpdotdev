@@ -1,0 +1,510 @@
+:root {
+    --background: rgb(17, 0, 23);
+    --divbackgroud: rgb(24, 0, 39);
+    --lightdivbackgroud: #3f2746;
+    --lightdivbackgroud2: #9961ad;
+    --highlighttextpurple: #e3aff6;
+    --highlighttextyellow: #ebf6af;
+    --borderradius: 4px;
+    --shadowblur: 20px;
+}
+
+@font-face {
+    font-family: robotomono;
+    src: url(robotomono-medium.ttf);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background);
+    background-image: url(img/swtilecat.png);
+    image-rendering: pixelated;
+    background-size: 128px;
+    color: white;
+    font-family: robotomono;
+}
+
+.mainsite {
+    width: 800px;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 40px;
+    background-color: var(--divbackgroud);
+    border-radius: var(--borderradius);
+    box-shadow: 0px 0px var(--shadowblur) rgba(0, 0, 0, 0.278);
+    border-end-start-radius: 0px;
+    border-end-end-radius: 0px;
+}
+
+.message-text {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.leftbar {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    height: 700px;
+    margin-right: 10px;
+}
+
+.rightbar {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    height: 700px;
+    margin-left: 10px;
+}
+
+
+.center {
+    width: 100%;
+}
+
+.main {
+    background-color: var(--divbackgroud);
+    border-radius: var(--borderradius);
+    box-shadow: 0px 0px var(--shadowblur) rgba(0, 0, 0, 0.278);
+    padding: 15px;
+}
+
+.section {
+    background-color: var(--divbackgroud);
+    border-radius: var(--borderradius);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.titleSection {
+    display: flex;
+    background-color: var(--lightdivbackgroud);
+    border-radius: var(--borderradius);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-bottom: 5px;
+    
+    border-bottom: 3px solid var(--lightdivbackgroud2);
+    height: 20px;
+}
+
+.rightbar .titleSection {
+    justify-content: flex-start;
+    padding-left: 3px;
+}
+
+.leftbar .titleSection {
+    justify-content: flex-end;
+    padding-right: 3px;
+}
+
+.titleSection span {
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    height: 28px;
+    border-bottom: 3px solid var(--lightdivbackgroud);
+}
+
+.section a {
+    text-decoration: none;
+    color: white;
+}
+
+.item:hover {
+    background-color: var(--lightdivbackgroud);
+}
+
+.item span {
+    margin-top: 2px;
+    font-size: 12px;
+    margin: auto 0;
+}
+
+.item img {
+    height: 15px;
+    width: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+hr {
+    border: 3px #fff solid;
+    border-radius: 99px;
+    margin: 0px;
+    margin-bottom: 10px;
+    opacity: 10%;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-right: -10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.social a {
+    margin-right: 10px;
+}
+
+.social a img {
+    height: 70%;
+    width: 20px;
+}
+
+.credits {
+    text-align: center;
+}
+
+.credits p {
+    font-size: 11px;
+    margin-top: 0px;
+}
+
+.note {
+    opacity: 40%;
+}
+
+h1 {
+    font-size: 25px;
+    color: var(--highlighttextpurple);
+}
+
+p {
+    font-size: 13px;
+}
+
+.c {
+    text-align: center;
+}
+
+.cflex {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.banner img {
+    border-radius: var(--borderradius);
+    width: 800px;
+    height: 200px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.webrings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.dashedbox {
+    border: 2px var(--lightdivbackgroud2) dashed;
+    padding: 10px;
+}
+
+.dashedbox p {
+    margin: 0px;
+    font-size: 12px;
+}
+
+.dashedbox span {
+    font-size: 12px;
+}
+
+.dashedbox h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--highlighttextpurple);
+}
+
+.flexsection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.flexsection .dashedbox {
+    width: 100%;
+}
+
+a {
+    color: var(--highlighttextpurple);
+}
+
+.credits a {
+    font-size: 12px;
+}
+
+.avatar-c {
+    width: 100%;
+    border-radius: var(--borderradius);
+    background-color: black;
+    image-rendering: auto;
+}
+
+.colorp {
+    color: var(--highlighttextpurple);
+}
+
+.main span {
+    font-size: 13px;
+}
+
+li {
+    font-size: 13px;
+}
+
+.diamsg {
+    position: relative;
+    border: 3px solid var(--lightdivbackgroud2);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.perguntakoid {
+    position: absolute;
+    top: -13px;
+    left: 10px;
+    background-color: var(--divbackgroud);
+    padding: 0 10px;
+    color: var(--highlighttextpurple);
+}
+
+.respostakoid {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.respostakoid img {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.data {
+    position: absolute;
+    bottom: -11px;
+    right: 10px; 
+    background-color: var(--divbackgroud);
+    padding: 0 10px;
+    color: #585858;
+}
+
+.infokoid {
+    position: absolute;
+    bottom: -11px;
+    left: 10px; 
+    background-color: var(--divbackgroud);
+    padding: 0 10px;
+    color: #585858;
+}
+
+.infokoid span {
+    font-size: 10px;
+}
+
+.project {
+    width: 100%;
+    border: 2px var(--lightdivbackgroud2) dashed;
+    border-radius: var(--borderradius);
+    overflow: hidden;
+}
+
+.projecta {
+    color: unset;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.projectinfo {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.project img {
+    width: 100%;
+}
+
+.projecttitle span {
+    font-size: 16px;
+    color: var(--highlighttextpurple);
+    font-weight: bold;
+}
+
+.projectdescription {
+    width: 100%;
+}
+
+.aboutheader {
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 20px !important; 
+    margin-bottom: 10px !important;
+}
+
+.aboutheader h2 {
+    margin: 0;
+}
+
+.aboutheader span {
+    font-size: 15px;
+}
+
+.avatar {
+    width: 150px; 
+    border: 2px var(--lightdivbackgroud2) dashed;
+}
+
+.jumptonavigation {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .mainsite {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftbar {
+        display: none;
+        order: 2;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .rightbar {
+        display: none;
+        order: 3;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .center {
+        order: 1;
+    }
+
+    .credits {
+        order: 4;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .message {
+        width: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .dashedbox {
+        border: 1px dashed #9961ad;
+    }
+
+    .fsphone {
+        flex-direction: column;
+    }
+
+    .fsphone .dashedbox {
+        width: auto;
+    }
+
+    span {
+        font-size: 13px;
+    }
+
+    .aboutheader {
+        gap: 15px !important; 
+    }
+    
+    .aboutheader span {
+        font-size: 11px;
+    }
+
+    .avatar {
+        width: 120px;
+    }
+
+    .jumptonavigation {
+        display: flex;
+        justify-content: center;
+    }
+
+    .credits-main .flexsection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .credits-main .flexsection .dashedbox {
+        width: auto;
+    }
+
+    .phone-none {
+        display: none;
+    }
+
+    .leftbar, .rightbar {
+        display: flex;
+    }
+
+    .leftbar {
+        margin-bottom: -10px;
+    }
+}
