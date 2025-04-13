@@ -1,7 +1,7 @@
 const mensagens = [
     'long live indieweb!',
     'rm -rf /*',
-    'this site was made by humans',
+    'this website was made by humans',
     './lexpdev.sh',
     'i use arch btw',
     ':(){:|:&};:',
