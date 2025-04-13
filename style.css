@@ -2,7 +2,7 @@
     --background: rgb(17, 0, 23);
     --divbackgroud: rgb(24, 0, 39);
     --lightdivbackgroud: #3f2746;
-    --lightdivbackgroud2: #9961ad;
+    --lightdivbackgroud2: rgb(153, 97, 173);
     --highlighttextpurple: #e3aff6;
     --highlighttextyellow: #ebf6af;
     --borderradius: 4px;
@@ -395,6 +395,19 @@ li {
 
 .jumptonavigation {
     display: none;
+}
+
+textarea {
+    width: 300px;
+    background-color: var(--lightdivbackgroud);
+    border: 0px;
+    border-radius: var(--borderradius);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.linkstyle {
+    color: black;
 }
 
 @media only screen and (max-width: 800px) {
