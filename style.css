@@ -25,6 +25,10 @@ body {
     font-family: robotomono;
 }
 
+.middle {
+
+}
+
 .mainsite {
     width: 800px;
 }
@@ -408,6 +412,43 @@ textarea {
 
 .linkstyle {
     color: black;
+}
+
+.gallerydiv img {
+    width: 100%;
+    border-radius: var(--borderradius);
+}
+
+.gallerydiv h3,h4 {
+    margin: 0px;
+}
+
+.gallerydiv a {
+    text-decoration: none;
+}
+
+.gallerydiv a:hover {
+    text-decoration: underline;
+}
+
+.w-aspects {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    border-top: 2px var(--lightdivbackgroud2) dashed;
+}
+
+.w-aspect {
+    width: 100%;
+    padding: 10px;
+}
+
+.w-aspect:hover {
+    background-color: #3f2746;
+}
+
+.w-aspect-phone {
+    border-left: 2px var(--lightdivbackgroud2) dashed;
 }
 
 @media only screen and (max-width: 800px) {
