@@ -3,12 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexp.dev - gallery</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div style="display: inline;">
-        <h1>not finished yet...</h1>
-        <p>come back later!!</p>
+    <div class="mainsite">
+        <div class="message box">
+            <div class="message-text">
+                <span id="mensagem"></span>
+                <noscript><span>sudo rm -rf /*</span></noscript>
+            </div>
+            <!-- 
+            <div class="language">
+                <span>🇬🇧</span>
+            </div> -->
+        </div>
+
+        <div class="banner">
+            <img src="/img/banner-top.png" alt="Overlay" class="overlay">
+            <a href="index.html"><img src="/img/banners/2.png" alt="website banner" class="bannerimg"></a>
+        </div>
+
+        <div class="container">
+            <div class="leftbar box" id="leftbar">
+                <div class="section">
+                    <div class="titleSection">
+                        <span>main</span>
+                    </div>
+
+                    <a href="../index.html">
+                        <div class="item">
+                            <img src="/img/home.svg" alt="">
+                            <span class="itemtext">home</span>
+                        </div>
+                    </a>
+
+                    <a href="../about.html">
+                        <div class="item">
+                            <img src="/img/question.svg" alt="">
+                            <span class="itemtext">about me</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="section">
+                    <div class="titleSection">
+                        <span>my stuff</span>
+                    </div>
+
+                    <a href="../gallery/">
+                        <div class="item">
+                            <img src="/img/images.svg" alt="">
+                            <span class="itemtext">gallery</span>
+                        </div>
+                    </a>
+
+                    <a href="../projects.html">
+                        <div class="item">
+                            <img src="/img/lightbulb.svg" alt="">
+                            <span class="itemtext">projects</span>
+                        </div>
+                    </a>
+
+                    <a href="javascript:alert('not ready yet...')">
+                        <div class="item">
+                            <img src="/img/journal.svg" alt="">
+                            <span class="itemtext">blog</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="section">
+                    <div class="titleSection">
+                        <span>other</span>
+                    </div>
+
+                    <a href="../credits.html">
+                        <div class="item">
+                            <img src="/img/heart.svg" alt="">
+                            <span class="itemtext">credits</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="center box">
+                <a href="#leftbar"><div class="main jumptonavigation" style="margin-bottom: 10px;">
+                    <span>\/ jump to navigation \/ </span>
+                </div></a>
+                <div class="main">
+                    <h1 class="c">my media gallery</h1>
+                    <p>this is the spot where i put photos i took or stuff i made (like wallpapers, songs, etc).</p> 
+                    <div class="flexsection gallerydiv">
+                        <!--1-wallpapers 2-photos 3-musics maybe?-->
+                        <div class="dashedbox">
+                            <a href="wallpapers.html">
+                                <img src="/img/gallery/wallpapers.png" alt="">
+                                <h4 class="c">wallpapers</h4>
+                            </a>
+                        </div>
+                    
+                        <div class="dashedbox">
+                            <a href="photos.html">
+                                <img src="/img/gallery/photos.png" alt="">
+                                <h4 class="c">photos</h4>
+                            </a>
+                        </div>
+                        
+                    
+                        <div class="dashedbox">
+                            <a href="musics.html">
+                                <img src="/img/gallery/musicas.png" alt="">
+                                <h4 class="c">songs</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <p>if you wanna use any of these pics for personal stuff (like wallpapers for your phone or your personal site), go for it! just remember to credit me! for commercial use though, hit me up.</p>
+                </div>
+                <div class="credits" style="margin-top: 10px;">
+                    <a href="/">mudar para português</a>
+                    <p class="note">
+                        made by © lexpdev<br>in 2025.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rightbar box">
+                <div class="section">
+                    <div class="titleSection">
+                        <span>social</span>
+                    </div>
+
+                    <a href="https://youtube.com/@oluscano" target="_blank">
+                        <div class="item">
+                            <img src="/img/youtube.svg" alt="">
+                            <span class="itemtext">youtube</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/luscanodev" target="_blank">
+                        <div class="item">
+                            <img src="/img/github.svg" alt="">
+                            <span class="itemtext">github</span>
+                        </div>
+                    </a>
+
+                    <a href="https://bsky.app/profile/lexpdev.xyz" target="_blank">
+                        <div class="item">
+                            <img src="/img/bluesky.svg" alt="">
+                            <span class="itemtext">bluesky</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="section">
+                    <div class="titleSection">
+                        <span>webrings</span>
+                    </div>
+
+                    <div class="webrings">
+                        <span style="font-size: 12px; margin-bottom: 5px;">friends</span>
+                        <a href="https://anjos.cc" target="_blank"><img src="/img/webrings/anjosa.png" alt="Anjos.cc; an a with an asterisk (a*)"></a>
+                        <a href='https://nekoraita.art.br' target='_blank'><img src='/img/webrings/nekoraita.png' alt='Nekoraita'></a>
+                        <span style="font-size: 12px;  margin-bottom: 5px;">others</span>
+                        <a href="https://swiftyshq.neocities.org/" target="_blank"><img src="/img/webrings/swsign.png" alt="Swifty's HQ!"></a>
+                        <a href="https://skydev.xyz/" target="_blank"><img src="/img/webrings/skydevxyzbutton.gif" alt="skydev.xyz; a happy bear jumping with a colorful background"></a>
+                        <a href="https://jbcarreon123.nekoweb.org"><img src="/img/webrings/jbtn.gif" alt="jb's site"></a>
+                        <a href="https://breq.dev"><img src="/img/webrings/breq.png" alt="breq!"></a>
+                        <span style="font-size: 12px;  margin-bottom: 5px;"><a href="../webring.html" style="color: var(--highlighttextpurple); text-decoration: underline;">my webrings!</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+<script>
+    const banner = document.querySelector('.bannerimg');
+    const randomN = Math.floor(Math.random() * 5) + 2; // we don't talk about 1.png...
+    banner.src = `/img/banners/${randomN}.png`;
+</script>
+<script src="/en/message.js"></script>
 </body>
 </html>
