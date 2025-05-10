@@ -477,11 +477,11 @@ textarea {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* exemplo com fundo escuro semi-transparente */
-    z-index: 69; /* garante que fique acima de outros elementos */
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 69;
     display: flex;
-    justify-content: center;  /* centraliza horizontalmente */
-    align-items: center;      /* centraliza verticalmente */
+    justify-content: center; 
+    align-items: center;    
     display: none;
 }
 
@@ -540,6 +540,49 @@ textarea {
 
 .photodescription {
     width: 40%;
+}
+
+.warning-language {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 69; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.wl-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px dashed var(--lightdivbackgroud2);
+}
+
+.warning-language h3 {
+    text-align: center;
+}
+
+.wl-links {
+    display: flex;
+    gap: 150px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.wl-links a {
+    text-decoration: none;
+}
+
+.wl-links a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 800px) {
