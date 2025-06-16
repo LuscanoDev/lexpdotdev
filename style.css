@@ -640,6 +640,14 @@ p img {
 	width: 100%;
 }
 
+blockquote {
+	opacity: 40%
+}
+
+strong {
+	color: var(--highlighttextpurple);
+}
+
 @media only screen and (max-width: 800px) {
     .mainsite {
         width: 100%;
