@@ -3,7 +3,6 @@ const mensagens = [
     'rm -rf /*',
     'this website was made by humans',
     './lexpdev.sh',
-    'i use arch btw',
     ':(){:|:&};:',
     '¯\\_(ツ)_/¯',
     'ᕕ( ᐛ )ᕗ',
