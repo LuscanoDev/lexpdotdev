@@ -192,6 +192,29 @@
                     -->
                 </div>
 
+
+                                <div class="section" id="player-section">
+                    <div class="titleSection">
+                        <span>estou ouvindo</span>
+                    </div>
+
+                    <div id="player-frame">
+                        <img id="album-cover" src="...">
+                        <div class="info">
+                            <a id="track"></a><br>
+                            <a id="artist"></a><br>
+                            <span id="date"></span>
+                        </div>
+                        <img class="refresh" src="/img/refresh.png" width="11" height="11" onclick="loadplayer()">
+                    </div>
+
+                    <!-- evitar que fique um espaço vazio quando o navegador não suporta javascript -->
+                    <noscript>
+                        <style>
+                            #player-section { display: none !important; }
+                        </style>
+                    </noscript>
+                </div>
                 <div class="section">
                     <div class="titleSection">
                         <span>webrings</span>
@@ -220,5 +243,6 @@
 </script>
 <script src="/message.js"></script>
 <script src="/language.js"></script>
+<script src="/scripts.js"></script>
 </body>
 </html>

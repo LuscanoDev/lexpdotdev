@@ -112,6 +112,9 @@
                         </div>
                         <div class="dashedbox">
                             <h3>changelog</h3>
+                            <span class="note">13.09.2025</span>
+                            <p>added a section that shows the music i'm listening to via lastfm</p>
+
                             <span class="note">03.09.2025</span>
                             <p>updating several things on the site, like the about me page</p>
 
@@ -189,6 +192,29 @@
                     </a>
                 </div>
 
+                <div class="section" id="player-section">
+                    <div class="titleSection">
+                        <span>listening</span>
+                    </div>
+
+                    <div id="player-frame">
+                        <img id="album-cover" src="...">
+                        <div class="info">
+                            <a id="track"></a><br>
+                            <a id="artist"></a><br>
+                            <span id="date"></span>
+                        </div>
+                        <img class="refresh" src="/img/refresh.png" width="11" height="11" onclick="loadplayer()">
+                    </div>
+
+                    <!-- evitar que fique um espaço vazio quando o navegador não suporta javascript -->
+                    <noscript>
+                        <style>
+                            #player-section { display: none !important; }
+                        </style>
+                    </noscript>
+                </div>
+
                 <div class="section">
                     <div class="titleSection">
                         <span>webrings</span>
@@ -216,5 +242,6 @@
     banner.src = `../img/banners/${randomN}.png`;
 </script>
 <script src="message.js"></script>
+<script src="/scripts-en.js"></script>
 </body>
-</html>
+</html> 

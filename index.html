@@ -136,6 +136,9 @@
                         </div>
                         <div class="dashedbox">
                             <h3>changelog</h3>
+                            <span class="note">13.09.2025</span>
+                            <p>adicionado uma sessão que mostra a música que estou ouvindo via lastfm</p>            
+
                             <span class="note">03.09.2025</span>
                             <p>atualizando várias coisas no site, como o sobre mim</p>   
 
@@ -219,6 +222,30 @@
                     -->
                 </div>
 
+                <div class="section" id="player-section">
+                    <div class="titleSection">
+                        <span>estou ouvindo</span>
+                    </div>
+
+                    <div id="player-frame">
+                        <img id="album-cover" src="...">
+                        <div class="info">
+                            <a id="track"></a><br>
+                            <a id="artist"></a><br>
+                            <span id="date"></span>
+                        </div>
+                        <img class="refresh" src="img/refresh.png" width="11" height="11" onclick="loadplayer()">
+                    </div>
+
+
+                    <!-- evitar que fique um espaço vazio quando o navegador não suporta javascript -->
+                    <noscript>
+                        <style>
+                            #player-section { display: none !important; }
+                        </style>
+                    </noscript>
+                </div>
+
                 <div class="section">
                     <div class="titleSection">
                         <span>webrings</span>
@@ -247,5 +274,6 @@
 </script>
 <script src="message.js"></script>
 <script src="language.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>

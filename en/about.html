@@ -177,6 +177,10 @@
                     <b class="colorp">-> why do you avoid using javascript?</b>
                     <p>so the site can be lighter and work on every device, whether it's a Galaxy S24 or a Galaxy S2.</p>
 
+                    <b class="colorp">-> how did you put the music you're listening to on the side of the page?</b>
+                    <p>using <a href="https://github.com/yuuinet/lastfm">a script</a> that takes the music from my lastfm profile and puts it on my site. thanks to vojislav for making the code and yuuinet for fixing a few things!!</p>
+
+
                     <b class="colorp">-> how can i donate some money to you?</b>
                     <p>currently, i don’t have any place to receive donations, but if you <b>REALLY</b> want to, contact me.</p>
 
@@ -232,6 +236,29 @@
                     </a>
                 </div>
 
+                <div class="section" id="player-section">
+                    <div class="titleSection">
+                        <span>listening</span>
+                    </div>
+
+                    <div id="player-frame">
+                        <img id="album-cover" src="...">
+                        <div class="info">
+                            <a id="track"></a><br>
+                            <a id="artist"></a><br>
+                            <span id="date"></span>
+                        </div>
+                        <img class="refresh" src="/img/refresh.png" width="11" height="11" onclick="loadplayer()">
+                    </div>
+
+                    <!-- evitar que fique um espaço vazio quando o navegador não suporta javascript -->
+                    <noscript>
+                        <style>
+                            #player-section { display: none !important; }
+                        </style>
+                    </noscript>
+                </div>
+
                 <div class="section">
                     <div class="titleSection">
                         <span>webrings</span>
@@ -259,5 +286,6 @@
     banner.src = `../img/banners/${randomN}.png`;
 </script>
 <script src="message.js"></script>
+<script src="/scripts-en.js"></script>
 </body>
 </html> 
