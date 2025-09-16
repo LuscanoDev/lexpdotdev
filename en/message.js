@@ -8,6 +8,7 @@ const mensagens = [
     'ᕕ( ᐛ )ᕗ',
     'making websites is hard...',
     '>··<',
-    'Would you. Could you. On a train?'
+    'Would you. Could you. On a train?',
+    'trans rights!'
 ];
 document.getElementById('mensagem').textContent = mensagens[Math.floor(Math.random() * mensagens.length)];

@@ -96,3 +96,7 @@ async function loadplayer() {
 }
 
 loadplayer();
+
+const banner = document.querySelector('.bannerimg');
+const randomN = Math.floor(Math.random() * 5) + 5; // nos não falamos sobre o 1.png...
+banner.src = `/img/banners/${randomN}.png`;

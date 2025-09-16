@@ -9,6 +9,11 @@
     --shadowblur: 20px;
 }
 
+::selection {
+  color: white;
+  background: var(--lightdivbackgroud2);
+}
+
 @font-face {
     font-family: robotomono;
     src: url(robotomono-medium.ttf);
@@ -94,9 +99,12 @@ body {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     padding-bottom: 5px;
-    
     border-bottom: 3px solid var(--lightdivbackgroud2);
     height: 20px;
+}
+
+.titleSection:hover {
+    background-color: rgb(73, 49, 80);
 }
 
 .rightbar .titleSection {
@@ -187,6 +195,11 @@ hr {
 h1 {
     font-size: 25px;
     color: var(--highlighttextpurple);
+    transition: color 0.2s ease;
+}
+
+h1:hover {
+    color: rgb(248, 197, 266);
 }
 
 p {
@@ -234,9 +247,20 @@ p {
     gap: 5px;
 }
 
+.webrings img:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
 .dashedbox {
     border: 2px var(--lightdivbackgroud2) dashed;
     padding: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.dashedbox:hover {
+    background-color: rgb(35, 0, 50);
 }
 
 .dashedbox p {
@@ -266,6 +290,10 @@ p {
 
 a {
     color: var(--highlighttextpurple);
+}
+
+a:hover {
+    color: rgb(248, 197, 266);
 }
 
 .credits a {
@@ -675,20 +703,21 @@ strong {
     background-color: rgba(0, 0, 0, 0.589);
     padding: 2px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
-a {
+#player-section a {
     text-decoration: none;
     color: white;
 }
 
-a#track {
+#player-section a#track {
     font-weight: bold;
     color: #e3aff6;
     display: inline-block;
 }
 
-a#artist {
+#player-section a#artist {
     font-size: 8pt;
     opacity: 70%;
 }
@@ -697,7 +726,7 @@ a#artist {
     font-size: 8pt;
 }
 
-a:hover {
+#player-section  a:hover {
     color: #f1cbff;
 }
 
@@ -855,15 +884,15 @@ a:hover {
         align-items: center;
         gap: 10px;
         margin-bottom: 0px;
-        text-align: left;     /* textos ficam à esquerda, ao lado da imagem */
-        padding-right: 36px;  /* espaço para o botão refresh absoluto */
+        text-align: left; 
+        padding-right: 36px; 
     }
 
     #album-cover {
-        flex: 0 0 72px;       /* largura fixa da capa no celular */
+        flex: 0 0 72px;  
         width: 72px;
         height: 72px;
-        object-fit: cover;    /* mantém proporção, corta se necessário */
+        object-fit: cover;  
         border-radius: 2px;
     }
 
@@ -872,20 +901,19 @@ a:hover {
         line-height: 1.1;
     }
 
-    a#track {
+    #player-section a#track {
         display: block;
         font-weight: bold;
         color: #e3aff6;
         font-size: 14pt;
     }
 
-    a#artist, #date {
+    #player-section a#artist, #date {
         display: block;
         font-size: 8pt;
         opacity: 0.8;
     }
 
-    /* manter o refresh no canto superior direito */
     .refresh {
         position: absolute;
         top: 5px;
