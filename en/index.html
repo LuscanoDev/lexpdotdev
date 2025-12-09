@@ -92,15 +92,19 @@
                 <a href="#leftbar"><div class="main jumptonavigation" style="margin-bottom: 10px;">
                     <span>\/ jump to navigation \/ </span>
                 </div></a>
+
                 <div class="main">
                     <h1 class="c">welcome to lexp.dev!</h1>
 
                     <div class="dashedbox">
                         <h3>warning!</h3>
-                        <p>this website is still under development, so some pages might not work properly or just return an error. <br><br> this website was made thinking about being viewed on computers (although it works on phones). for the best experience, view this on a computer (or with the screen sideways, on some phones it also works).</p>
+                        <p>this website is still under development, so some pages might not work properly or just not exist yet. <br><br> this website was made with computers in mind (although it works on phones). for the best experience, view this on a computer.</p>
                     </div>
 
-                    <p>welcome to my personal website, this is my home on the internet, in one corner there are the photos i took, in another there are my projects, etc... feel free to explore this website! :) <br><br>i'm interested in technology in general, mainly in the software part. and i also really like the indieweb. want to know more about me? check out the page called... <a href="about.html">about me</a>.</p>
+                    <p>welcome to my personal website! this is my home on the internet. in one corner there are the photos i took, in another there are my projects, in another there's a blog, etc... feel free to explore this website! :)
+                        <br><br>
+                        i'm interested in technology in general (mostly the software side), i really like the indieweb, i like messing with gimp and i take photos. want to know more about me? check out the page called... <a href="about.html">about me!</a>
+                    </p>
 
                     <div class="flexsection fsphone">
                         <div class="dashedbox">
@@ -110,55 +114,67 @@
                                 <li>finish the gallery</li>
                             </ul>
                         </div>
+
                         <div class="dashedbox">
                             <h3>changelog</h3>
+                            <span class="note">09.12.2025</span>
+                            <p>renewing and updating most parts of the site, like the about me page, and adding some buttons</p>
+
                             <span class="note">20.11.2025</span>
                             <p>fixing some broken code on the blog</p>
 
                             <span class="note">15.09.2025</span>
                             <p>fixing some bugs from the previous update, shortening the changelog list (this one), some design improvements on the site and new banners</p>
 
-                            <span class="note">13.09.2025</span>
-                            <p>added a section that shows the music i'm listening to via lastfm</p>
-
                             <a href="changelog.html" class="cflex"><span>view all changelogs</span></a>
                         </div>
                     </div>
                 </div>
+
                 <div class="credits" style="margin-top: 10px;">
-                    <a href="../">mudar para português</a>
+                    <a href="/">mudar para português</a>
                     <p class="note">
                         made by © lexpdev<br>in 2025.
                     </p>
                 </div>
             </div>
 
+
             <div class="rightbar box">
                 <div class="section">
                     <div class="titleSection">
-                        <span>social</span>
+                        <span>links</span>
                     </div>
 
-                    <a href="https://youtube.com/@oluscano" target="_blank">
+                    <a href="https://youtube.com/@lexpdev" target="_blank">
                         <div class="item">
-                            <img src="../img/youtube.svg" alt="">
+                            <img src="/img/youtube.svg" alt="youtube icon">
                             <span class="itemtext">youtube</span>
                         </div>
                     </a>
 
                     <a href="https://github.com/luscanodev" target="_blank">
                         <div class="item">
-                            <img src="../img/github.svg" alt="">
+                            <img src="/img/github.svg" alt="github icon">
                             <span class="itemtext">github</span>
                         </div>
                     </a>
 
                     <a href="https://bsky.app/profile/lexpdev.xyz" target="_blank">
                         <div class="item">
-                            <img src="../img/bluesky.svg" alt="">
+                            <img src="/img/bluesky.svg" alt="bluesky icon">
                             <span class="itemtext">bluesky</span>
                         </div>
                     </a>
+
+                    <!--
+                    <a href="javascript:alert('do you really like twitter? ಠ_ಠ')">
+                        <div class="item">
+                            <img src="/img/twitter.svg" alt="">
+                            <span class="itemtext">twitter</span>
+                        </div>
+                    </a>
+                    -->
                 </div>
 
                 <div class="section" id="player-section">
@@ -176,7 +192,6 @@
                         <img class="refresh" src="/img/refresh.png" width="11" height="11" onclick="loadplayer()">
                     </div>
 
-                    <!-- evitar que fique um espaço vazio quando o navegador não suporta javascript -->
                     <noscript>
                         <style>
                             #player-section { display: none !important; }
@@ -186,19 +201,32 @@
 
                 <div class="section">
                     <div class="titleSection">
-                        <span>webrings</span>
+                        <span>buttons</span>
                     </div>
 
                     <div class="webrings">
                         <span style="font-size: 12px; margin-bottom: 5px;">friends</span>
-                        <a href="https://anjos.cc" target="_blank"><img src="../img/webrings/anjosa.png" alt="Anjos.cc; an a with an asterisk (a*)"></a>
-                        <a href='https://nekoraita.art.br' target='_blank'><img src='../img/webrings/nekoraita.png' alt='Nekoraita'></a>
-                        <span style="font-size: 12px;  margin-bottom: 5px;">others</span>
-                        <a href="https://swiftyshq.neocities.org/" target="_blank"><img src="../img/webrings/swsign.png" alt="Swifty's HQ!"></a>
-                        <a href="https://skydev.xyz/" target="_blank"><img src="../img/webrings/skydevxyzbutton.gif" alt="skydev.xyz; a happy bear jumping with a colorful background"></a>
-                        <a href="https://jbcarreon123.nekoweb.org"><img src="/img/webrings/jbtn.gif" alt="jb's site"></a>
-                        <a href="https://breq.dev"><img src="/img/webrings/breq.png" alt="breq!"></a>
-                        <span style="font-size: 12px;  margin-bottom: 5px;"><a href="webring.html" style="color: var(--highlighttextpurple); text-decoration: underline;">my webrings!</a></span>
+                        <a href="https://anjos.cc" target="_blank"><img src="/img/webrings/anjosa.png" alt="Anjos.cc; an a with an asterisk (a*)"></a>
+                        <a href="https://nekoraita.art.br" target="_blank"><img src="https://www.nekoraita.art.br/static/resources/button.png" alt="Nekoraita"></a>
+
+                        <span style="font-size: 12px; margin-bottom: 5px;">cool websites</span>
+                        <a href="https://swiftyshq.neocities.org/" target="_blank"><img src="https://swiftyshq.neocities.org/img/res/aff/swsign.png" alt="Swifty's HQ!"></a>
+                        <a href="https://skydev.xyz/" target="_blank"><img src="https://skydev.xyz/icons/skydevxyzbutton.gif" alt="skydev.xyz; a happy bear jumping with a colorful background"></a>
+                        <a href="https://jbc.lol"><img src="https://jbc.lol/imgs/buttons/jbtn.svg" alt="jb's site"/></a>
+                        <a href="https://breq.dev"><img src="https://breq.dev/badges/breq.png" alt="breq!"></a>
+                        <a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif" alt="dimden.dev"></a>
+
+                        <span style="font-size: 12px; margin-bottom: 5px;">others</span>
+                        <a href="https://makea.fish"><img src="/img/webrings/makeafish.png" alt="make a fish"/></a>
+                        <a href="magnet:?xt=urn:btih:2bcb5dff67c1cd2ed8979747351e9415127084ae&dn=seed_this_torrent.png&tr=wss%3a%2f%2ftracker.btorrent.xyz&tr=wss%3a%2f%2ftracker.openwebtorrent.com&tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337&tr=udp%3a%2f%2fexplodie.org%3a6969&tr=udp%3a%2f%2ftracker.empire-js.us%3a1337">
+                            <img src="/img/webrings/sharingiscaring.gif" alt="sharing is caring... seed your torrents!">
+                        </a>
+                        <a><img src="/img/webrings/saynotoweb.gif" alt="keep the web free; say no to web3"></a>
+                        <a href="https://neocities.org"><img src="https://yoohoosearch.neocities.org/neocities-buttons/neocities.gif" alt="neocities; your home on the web"></a>
+
+                        <span style="font-size: 12px; margin-bottom: 5px;">
+                            <a href="/en/webring.html" style="color: var(--highlighttextpurple); text-decoration: underline;">my buttons</a>
+                        </span>
                     </div>
                 </div>
             </div>

@@ -6,8 +6,8 @@ async function loadplayer() {
 
     const LASTFM_API_KEY = "eed9554ea30c7d16192dcda32547d745";
     const username = "lexpdev"; // change username here
-    const url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&format=json&extended=true&api_key=" 
-                + LASTFM_API_KEY + "&limit=1&user=" + username;
+    const url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&format=json&extended=true&api_key="
+        + LASTFM_API_KEY + "&limit=1&user=" + username;
 
     async function httpGet(url) {
         const resp = await fetch(url);
@@ -96,6 +96,82 @@ async function loadplayer() {
 }
 
 loadplayer();
+
+document.addEventListener('DOMContentLoaded', function () {
+    const photoContainer = document.querySelector('.photo-container');
+    const photos = document.querySelectorAll('.photossection img');
+    const photoOverlay = document.querySelector('.photo-overlay');
+    const photoClose = document.querySelector('.photo-close');
+    const photoImg = document.querySelector('.photoimg');
+    const photoDescription = document.querySelector('.photodescription');
+
+    photoClose.addEventListener('click', function () {
+        photoOverlay.style.display = 'none';
+    });
+
+    photoOverlay.addEventListener('click', function (e) {
+        if (e.target === photoOverlay) {
+            photoOverlay.style.display = 'none';
+        }
+    });
+
+
+    photoContainer.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+
+    photos.forEach(photo => {
+        photo.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const title = photo.getAttribute('ptitle');
+            const description = photo.getAttribute('pdescription');
+            const camera = photo.getAttribute('camera');
+            const date = photo.getAttribute('date');
+            const location = photo.getAttribute('location');
+            const fullres = photo.getAttribute('fullres');
+            const preview = photo.src;
+
+            photoImg.innerHTML = `<a href="${fullres}" target="_blank"><img src="${preview}" alt="${title}"></a>`;
+
+            let descriptionHTML = `
+                    <h2 class="galleryh2">${title}</h2>
+                    <p>${description}</p>
+                `;
+
+            if (camera) {
+                descriptionHTML += `
+                        <div class="photoinfo">
+                            <img src="/img/camera.svg"> <span>${camera}</span>
+                        </div>
+                    `;
+            }
+
+            if (date) {
+                descriptionHTML += `
+                        <div class="photoinfo">
+                            <img src="/img/calendar.svg"> <span>${date}</span>
+                        </div>
+                    `;
+            }
+
+            if (location) {
+                descriptionHTML += `
+                        <div class="photoinfo">
+                            <img src="/img/location.svg"> <span>${location}</span>
+                        </div>
+                    `;
+            }
+
+            descriptionHTML += `
+                        <p class="note">aperte fora da tela ou no X para sair da imagem<br><br>clique na imagem para ver ela em melhor qualidade</p>
+                `;
+
+            photoDescription.innerHTML = descriptionHTML;
+            photoOverlay.style.display = 'flex';
+        });
+    });
+});
 
 const banner = document.querySelector('.bannerimg');
 const randomN = Math.floor(Math.random() * 5) + 5; // nos não falamos sobre o 1.png...

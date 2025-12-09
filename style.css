@@ -401,22 +401,17 @@ li {
 }
 
 .aboutheader {
-    display: flex !important; 
-    align-items: center !important; 
-    gap: 20px !important; 
-    margin-bottom: 10px !important;
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
 }
 
-.aboutheader h2 {
+.aboutheader h1 {
     margin: 0;
 }
 
-.aboutheader span {
-    font-size: 15px;
-}
-
 .avatar {
-    width: 150px; 
+    width: 180px; 
     border: 2px var(--lightdivbackgroud2) dashed;
 }
 
@@ -550,7 +545,7 @@ textarea {
     margin-left: 15px;
 }
 
-.photodescription h3 {
+h3 {
     color: var(--highlighttextpurple);
 }
 
@@ -734,6 +729,10 @@ strong {
     width: 100%; 
     max-width: 100%; 
     height: auto;
+}
+
+b {
+    color: var(--highlighttextpurple);
 }
 
 @media only screen and (max-width: 800px) {
