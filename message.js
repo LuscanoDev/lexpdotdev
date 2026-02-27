@@ -15,6 +15,7 @@ const mensagens = [
     'agora é a melhor época para fazer arte. FAÇA AGORA!',
     'pare de atualizar a pagina! >:(',
     'tem gente que realmente lê isso?',
-    'seja livre e use linux!'
+    'seja livre e use linux!',
+    '"XD"'
 ];
 document.getElementById('mensagem').textContent = mensagens[Math.floor(Math.random() * mensagens.length)];

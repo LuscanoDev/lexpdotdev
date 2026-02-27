@@ -15,7 +15,8 @@ const mensagens = [
     'meowgic is real!',
     'now is the best time to make art. DO IT NOW!',
     'stop refreshing the page! >:(',
-    'do people actually read this?',
-    'be free and use linux!'
+    'do people actually read this..?',
+    'be free and use linux!',
+    '"XD"'
 ];
 document.getElementById('mensagem').textContent = mensagens[Math.floor(Math.random() * mensagens.length)];
